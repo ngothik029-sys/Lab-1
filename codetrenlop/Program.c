@@ -53,11 +53,107 @@ void sapXepPhanTuMang1Chieu()
     }
 
 }
+ 
+void demoMang2chieu()
+{
+    // string - "string.h"
+    char kyTu = 'A';
+    char mangKyTu[10] = "Anh";
+    for (int i = 0; i < 3; i++)
+    {
+        scanf(" %c", &mangKyTu[i]);
+    }
+    //fgets(mangKyTu);
+    for (int i = 0; i < 3; i++)
+    {
+        scanf_s(" %c", &mangKyTu[i]);
+    }
+
+
+    int array[2][3];
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf("mang[%d][%d] = ", i, j);
+            scanf_s("%d", &array[i][j]);
+        }
+    }
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+
+            printf("%d", &array[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 
 int main()
 {
+    int chonChucNang;
+    do
+    {
+        printf("Menu");
+        printf("\n");
+        printf("1.kiemTraSoNguyen");
+        printf("\n");
+        printf("2.boiChungUocChung ");
+        printf("\n");
+        printf("3.uocChungBoiChung");
+        printf("\n");
+        printf("4.sapXepPhanTuMang1Chieu");
+        printf("\n");
+        printf("5.demoMang2chieu");
+        printf("\n");
+        printf("0. thoat");
+        printf("\n");
+        printf("vui long chon chuc nang: ");
+        scanf_s("%d", &chonChucNang);
+        if (chonChucNang == 0)
+        {
+            printf("Thoat chuong trinh.\n");
+            break;
+        }
+        switch (chonChucNang) {
+        case 1:
+            kiemtraSoNguyen();
+            break;
+        case 2:
+            boiChungUocChung();
+            break;
+        case 3:
+            uocChungBoiChung();
+            break;
+        case 4:
+            sapXepPhanTuMang1Chieu();
+            break;
+        case 5:
+            demoMang2chieu();
+            break;
+        case 0:
+            printf("Thoat chuong trinh\n");
+            break;
+        default:
+            printf("Lua chon khong hop le, vui long chon chuc nang trong menu.\n");
+        }
+
+
+
+
+
+    } while (chonChucNang != 0);
+    return 0;
 
 }
+
+
+//int main()
+//{
+//
+//}
 
 
 
