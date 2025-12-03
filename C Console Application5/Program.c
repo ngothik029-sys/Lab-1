@@ -232,46 +232,6 @@ void Xaydungchuongvaytienmuaxe() {
     }
 }
 
-//void demomang2chieu() {
-//    int array[2][3];
-//    for (int i = 0; i < 2; i++);
-//    {
-//        for (int j = 0; j < 3; j++)
-//        {
-//            printf("%d", &array[i][j]);
-//           
-//        }
-//        printf("\n");
-//
-//    }void demomang2chieu() {
-
-void demomang2chieu() {
-    // string -"string.h"
-    int i;
-    char Kytu = 'A';
-    char mangKytu[10] = { 'A','n','h' };
-   
-    for (int i = 0; i < 3;i++);
-    {
-        scanf(" %c", &mangKytu[i]);
-    }
-   /* fgets(mangKytu);*/
-   /* for (int i = 0; i < 3;i++);
-    {
-        printf("%c", mangKytu[i]);
-    }*/
-    puts(mangKytu);
-
-    int array[2][3];
-
-    for (int i = 0; i < 2; i++) {           // bỏ dấu ; thừa
-        for (int j = 0; j < 3; j++) {
-            printf("%p ", (void*)&array[i][j]);   // in địa chỉ
-        }
-        printf("\n");
-    }
-}
-
 
 
 int main(){
@@ -309,7 +269,6 @@ int main(){
         case 8: /*SapxepThongtinSinhvien()*/; break;
         case 9: /* game */ break;
         case 10: /* phan so */ break;
-        case 11: demomang2chieu(); break;
         case 0: printf("Thoat.\n"); break;
         default: printf("Lua chon khong hop le.\n");
         }
@@ -320,7 +279,7 @@ int main(){
     } while (tieptuc == 1);
 
     return 0;
-}
+}s
 
 
 // Debug/Run chuong trinh: bam "F5" hoac "Debug > Start Debugging" tren menu
@@ -336,4 +295,4 @@ int main(){
 //      Co the xem thu muc project, noi luu file *.sln bang cach
 //      bam phim chuot phai vao "Solution" > chon "Open Folder in File Explorer"
 
-// GV: AnhTT184
+//
