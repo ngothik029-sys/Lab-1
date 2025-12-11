@@ -2,6 +2,8 @@
 // Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.
 
 #include <stdio.h>
+#include <string.h>
+
 void kiemtraSoNguyen()
 {
     printf("Kiem Tra So Nguyen\n");
@@ -91,9 +93,79 @@ void demoMang2chieu()
 }
 
 
+void demoString()
+{
+    // string - "string.h"
+    char mangKyTu[10];
+    //fgets(mangKyTu);
+
+    while (getchar() != '\n');
+
+    printf("Nhap du lieu: ");
+    fgets(mangKyTu, sizeof(mangKyTu), stdin);
+
+    printf("%s", mangKyTu);
+    printf("\n");
+    //puts(mangKyTu);
+
+    printf("String Length: ");
+    printf("%d", strlen(mangKyTu) - 1);
+    printf("\n");
+
+
+
+
+
+
+    /*printf("String Compare The Same As: ");
+    printf("%d", strcmp("aBc", "aBc"));
+    printf("\n");
+    printf("String Compare Less than: ");
+    printf("%d", strcmp("A", "C"));
+    printf("\n");
+    printf("String Compare Greater than: ");
+    printf("%d", strcmp("C", "A"));
+    printf("\n");*/
+
+    printf("String Reverse (Encryption): ");
+    printf("%s", _strrev(mangKyTu));
+    printf("\n");
+    printf("String Reverse (Decryption): ");
+    printf("%s", _strrev(mangKyTu));
+    printf("\n");
+    printf("String Lower: ");
+    printf("%s", _strrev(mangKyTu));
+    printf("\n");
+    printf("String Upper: ");
+    printf("%s", _strrev(mangKyTu));
+    printf("\n");
+    printf("Find String in String: ");
+   
+    if (strstr(mangKyTu, "A") != NULL)
+    {
+        printf("Found: ");
+        printf("%s", strstr(mangKyTu, "A"));
+    }
+    else {
+        printf("NOT FOUND");
+    }
+    printf("\n");
+}
+
+struct hocPhan {
+    char ten[50];
+    char ma[15];
+    int sotc;
+};
+
+
+
+
+
 int main()
 {
     int chonChucNang;
+
     do
     {
         printf("Menu");
@@ -107,6 +179,8 @@ int main()
         printf("4.sapXepPhanTuMang1Chieu");
         printf("\n");
         printf("5.demoMang2chieu");
+        printf("\n");
+        printf("6.demoString");
         printf("\n");
         printf("0. thoat");
         printf("\n");
@@ -133,6 +207,9 @@ int main()
         case 5:
             demoMang2chieu();
             break;
+        case 6:
+            demoString();
+            break;
         case 0:
             printf("Thoat chuong trinh\n");
             break;
@@ -141,10 +218,7 @@ int main()
         }
 
 
-
-
-
-    } while (chonChucNang != 0);
+    }  while (chonChucNang != 0);
     return 0;
 
 }
